@@ -1,0 +1,141 @@
+/* Container esticado horizontalmente */
+.carousel-container {
+  width: 100%;
+  max-width: 1240px; /* Altere para 95% ou 1350px se quiser ainda mais largo */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Card ocupando toda a extensão horizontal do container */
+.carousel-card {
+  width: 100%;
+  padding: 2.75rem 3.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.carousel-card:focus-visible {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-header {
+  margin-bottom: 1.25rem;
+}
+
+.carousel-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.carousel-card-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.25;
+}
+
+.carousel-highlight-tag {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+}
+
+/* Largura equilibrada para leitura de texto longo */
+.carousel-card-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 950px;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+}
+
+/* Rodapé com dots e setas */
+.carousel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.carousel-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Ajustes Mobile */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0 1rem;
+  }
+
+  .carousel-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .carousel-card-title {
+    font-size: 1.4rem;
+  }
+
+  .carousel-card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
